@@ -1,6 +1,8 @@
 package com.example.restarauntcrud.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "restaurants")
@@ -17,4 +19,7 @@ public class Restaurant
 	private String city;
 	private String state;
 	private String telepnone;
+
+	@OneToMany
+	private List<Menu> menus = new ArrayList<Menu>();
 }
